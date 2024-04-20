@@ -6,16 +6,54 @@
     <title>Leafy Link</title>
     <link rel="stylesheet" href="main.css">
     <script src="main.js" defer></script>
+    <link rel="icon" href="fevicon.jpeg" type="image/x-icon">
+
+    <style>
+       
+      .button:hover {
+        transition-duration: 0.4s;
+        background-color: #04AA6D;
+        color: lightgreen;
+      }
+    
+        #home {
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; /* Whimsical font for the whole body */
+        }
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        nav ul {
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        header img {
+        height: 80px; /* default size for desktop */
+    }
+
+    @media (max-width: 768px) {
+        header img {
+            height: 60px; /* smaller size for mobile devices */
+        }
+    }
+    </style>
 </head>
 <body>
     <header>
+        <img src="logo.jpeg" alt="Leafy Link Logo" style="height: 80px;"> <!-- Logo at the top of the header -->
         <h1>Leafy Link</h1>
         <nav>
             <ul>
-              <li><button class="button"><a href="#home">Home</a></button></li>
-              <li><button class="button"><a href="#plant-list">Plant List</a></button></li>
-              <li><button class="button"><a href="#marketplace">Marketplace</a></button></li>
-              <li><button class="button"><a href="#reminder">Set Reminder</a></button></li>
+                <li><button class="button"><a href="#home">Home</a></button></li>
+                <li><button class="button"><a href="#plant-list">Plant List</a></button></li>
+                <li><button class="button"><a href="#marketplace">Marketplace</a></button></li>
+                <li><button class="button"><a href="#login">Marketplace</a></button></li>
             </ul>
         </nav>
     </header>
@@ -26,8 +64,8 @@
         <p>How it works:</p>
         <p>1. Click on the "Plant List" button to see a list of available plants.</p>
         <p>2. Click the search bar to search for the specific plant you want.</p>
-        <p>3. Click "Add to Marketplace".</p> 
-        <p>4. A prompt to enter your name and phone number should appear. Once you've entered, your plant will be added to the "Marketplace" section with your name and phone number attached.</p>
+        <p>3. Click "Add to Marketplace".</p>
+        <p>4. A prompt to enter your name and phone number should appear. Once you've entered, set a price and your plant will be added to the "Marketplace" section with your name and phone number attached.</p>
     </section>
 
     <section id="plant-list">
@@ -45,12 +83,16 @@
         <div id="plant-list-container"></div>
         <h2>Marketplace</h2>
         <!-- Marketplace content will be added here by JavaScript -->
-        </div>
     </section>
-
-    <section id="reminder">
-        <h2>Set Reminder</h2>
-        <!-- Set reminder content goes here -->
+    <section id="login" style="text-align: center;">
+        <h2 style="font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;">Login</h2>
+        <form style="margin: 0 auto; width: 300px;">
+            <label for="username" style="display: block; margin-bottom: 10px;">Username:</label>
+            <input type="text" id="username" name="username" required style="width: 100%; padding: 5px; margin-bottom: 10px;"><br>
+            <label for="password" style="display: block; margin-bottom: 10px;">Password:</label>
+            <input type="password" id="password" name="password" required style="width: 100%; padding: 5px; margin-bottom: 10px;"><br>
+            <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">Login</button>
+        </form>
     </section>
     
     <footer>

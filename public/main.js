@@ -50,7 +50,7 @@ function drawTable(records) {
             <p><strong>Cycle:</strong> ${record.cycle}</p>
             <p><strong>Watering:</strong> ${record.watering}</p>
             <p><strong>Sunlight:</strong> ${record.sunlight}</p>
-            <button onclick="addToMarketplace(JSON.parse(atob('${btoa(JSON.stringify(record.id))}')), JSON.parse(atob('${btoa(JSON.stringify(record.common_name))}')), JSON.parse(atob('${btoa(JSON.stringify(record.scientific_name))}')), JSON.parse(atob('${btoa(JSON.stringify(record.cycle))}')), JSON.parse(atob('${btoa(JSON.stringify(record.watering))}')), JSON.parse(atob('${btoa(JSON.stringify(record.sunlight))}')), JSON.parse(atob('${btoa(JSON.stringify(record.default_image ? (record.default_image.small_url || record.default_image.original_url) : [].join()))}')))">Add to Marketplace</button>
+            <button class = "button" onclick="addToMarketplace(JSON.parse(atob('${btoa(JSON.stringify(record.id))}')), JSON.parse(atob('${btoa(JSON.stringify(record.common_name))}')), JSON.parse(atob('${btoa(JSON.stringify(record.scientific_name))}')), JSON.parse(atob('${btoa(JSON.stringify(record.cycle))}')), JSON.parse(atob('${btoa(JSON.stringify(record.watering))}')), JSON.parse(atob('${btoa(JSON.stringify(record.sunlight))}')), JSON.parse(atob('${btoa(JSON.stringify(record.default_image ? (record.default_image.small_url || record.default_image.original_url) : [].join()))}')))">Add to Marketplace</button>
 </div>`;
     }
     result.innerHTML = html;
